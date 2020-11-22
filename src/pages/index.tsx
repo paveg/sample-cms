@@ -1,22 +1,13 @@
 import * as React from 'react';
+import Link from 'next/link';
 
-type Props = {
-  articles: any
-}
-const Index: React.FC<Props> = (props: any) => {
-  console.log(props)
-  return null;
-}
-
-export async function getStaticProps() {
-  const res = await fetch('/api/articles')
-  const json = await res.json()
-
-  return {
-    props: {
-      contents: json.contents
-    }
-  }
-}
+const Index: React.FC = () => (
+  <div>
+    <h1>Index Page</h1>
+    <Link href="/articles">
+      <a>Articles Page</a>
+    </Link>
+  </div>
+);
 
 export default Index;

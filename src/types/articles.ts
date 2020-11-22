@@ -6,4 +6,4 @@ export type Article = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-}
+};
