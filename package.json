@@ -7,12 +7,20 @@
     "postbuild": "next-sitemap",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "pretty-quick --staged",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run lint"
+    }
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "next": "10.0.1",
-    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "^5.2.1",
@@ -20,7 +28,6 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.7",
-    "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "@types/styled-components": "^5.1.4",

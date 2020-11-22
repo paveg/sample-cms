@@ -8,8 +8,8 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head />
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
