@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://work.pavlog.tokyo',
+  siteUrl: '',
   generateRobotsTxt: true,
 };

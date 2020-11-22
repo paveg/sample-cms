@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
-    "@material-ui/styles": "^4.10.0",
-    "@types/chartjs": "0.0.31",
     "next": "10.0.1",
     "prop-types": "^15.7.2",
     "react": "17.0.1",

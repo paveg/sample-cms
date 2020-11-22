@@ -3,14 +3,6 @@ import reset from 'styled-reset';
 import React from 'react';
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import { MuiThemeProvider } from '@material-ui/core';
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: ['Noto Sans JP', 'sans-serif'].join(','),
-  },
-});
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -48,10 +40,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <title key="title">portfolio</title>
       </Head>
 
-      <MuiThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </MuiThemeProvider>
+      <GlobalStyle />
+      <Component {...pageProps} />
     </>
   );
 };
