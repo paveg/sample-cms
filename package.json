@@ -7,7 +7,16 @@
     "postbuild": "next-sitemap",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "pretty-quick --staged",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "pre-push": "npm run lint"
+    }
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
