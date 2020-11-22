@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <Toolbar>
           <Grid container justify="flex-start" alignItems="center">
             <Grid item xs={6}>
-              <Typography variant="h3">BLOG TITLE</Typography>
+              <Typography variant="h4">BLOG TITLE</Typography>
             </Grid>
             <Grid item>
               <ButtonGroup>

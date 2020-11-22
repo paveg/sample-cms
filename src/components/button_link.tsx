@@ -4,11 +4,12 @@ import { Button } from '@material-ui/core';
 
 type Props = {
   href: string;
+  small?: boolean;
 };
 
-const ButtonLink: React.FC<Props> = ({ href, children }) => (
+const ButtonLink: React.FC<Props> = ({ small, href, children }) => (
   <Link href={href} passHref>
-    <Button>{children}</Button>
+    {small ? <Button size="small">{children}</Button> : <Button>{children}</Button>}
   </Link>
 );
 
