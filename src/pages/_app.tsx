@@ -43,7 +43,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           rel="preload"
           as="style"
         />
-        <title key="title">portfolio</title>
+        <title key="title">Sample CMS</title>
       </Head>
 
       <StylesProvider injectFirst>
