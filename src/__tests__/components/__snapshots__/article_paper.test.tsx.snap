@@ -16,6 +16,7 @@ exports[`Layout when does not include children renders correctly component 1`] =
     </span>
     <br />
     <img
+      alt="an eye-catching image"
       className="sc-bdfBwQ dpAPNw"
       src="https://example.com/img"
     />
