@@ -19,7 +19,7 @@ jobs:
         with:
           name: coverage
           path: coverage
-      - uses: ziishaned/jest-reporter-action@latest
+      - uses: ziishaned/jest-reporter-action@v0.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           test-command: 'npm run test:ci'
