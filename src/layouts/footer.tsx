@@ -22,7 +22,7 @@ const Footer: React.FC = () => (
         </ButtonLink>
       </li>
       <li>
-        <ButtonLink small href="/privacy-policy">
+        <ButtonLink small href="/privacy_policy">
           <Typography color="textSecondary" variant="caption">
             privacy policy
           </Typography>
