@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonLink when normal call renders correctly component 1`] = `
+<a
+  aria-disabled={false}
+  className="MuiButtonBase-root MuiButton-root MuiButton-text"
+  href="/test"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="MuiButton-label"
+  >
+    TEST
+  </span>
+  <span
+    className="MuiTouchRipple-root"
+  />
+</a>
+`;
+
+exports[`ButtonLink with small props renders correctly component 1`] = `
+<a
+  aria-disabled={false}
+  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSizeSmall MuiButton-sizeSmall"
+  href="/test"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="MuiButton-label"
+  >
+    TEST
+  </span>
+  <span
+    className="MuiTouchRipple-root"
+  />
+</a>
+`;

@@ -1,23 +1,16 @@
 import * as React from 'react';
-import Paper from '@material-ui/core/Paper';
+import loadable from '@loadable/component';
 import Grid, { GridSize } from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import styled from 'styled-components';
+import { CircularProgress } from '@material-ui/core';
 import { Article } from '../types/articles';
 import Layout from '../components/layout';
-import ButtonLink from '../components/button_link';
+
+const ArticlePaper = loadable(() => import('../components/article_paper'));
 
 type Props = {
   articles: Article[];
 };
-
-const StyledImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
-const formatDate = (date: Date) => `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
 
 const Index: React.FC<Props> = ({ articles }) => {
   const maxGrid = 12;
@@ -28,25 +21,11 @@ const Index: React.FC<Props> = ({ articles }) => {
     <Layout>
       <Box m={2}>
         <Grid container spacing={1}>
-          {articles.map((article: Article) => {
-            const date = new Date(article.date);
-            return (
-              <Grid key={article.id} item xs={xs} sm={sm}>
-                <Paper variant="outlined">
-                  <Box p={1}>
-                    <Typography variant="caption">{formatDate(date)}</Typography>
-                    <br />
-                    {article.eyeCatching && <StyledImage src={article.eyeCatching.url} />}
-                    <Box textAlign="center">
-                      <ButtonLink small href={`articles/${article.id}`}>
-                        {article.title}
-                      </ButtonLink>
-                    </Box>
-                  </Box>
-                </Paper>
-              </Grid>
-            );
-          })}
+          {articles.map((article: Article) => (
+            <Grid key={article.id} item xs={xs} sm={sm}>
+              <ArticlePaper article={article} fallback={<CircularProgress />} />
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Layout>
