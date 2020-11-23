@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid, { GridSize } from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
+import styled from 'styled-components';
 import { Article } from '../types/articles';
 import Layout from '../components/layout';
 import ButtonLink from '../components/button_link';
@@ -10,6 +11,11 @@ import ButtonLink from '../components/button_link';
 type Props = {
   articles: Article[];
 };
+
+const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
+`;
 
 const formatDate = (date: Date) => `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
 
@@ -29,6 +35,8 @@ const Index: React.FC<Props> = ({ articles }) => {
                 <Paper variant="outlined">
                   <Box p={1}>
                     <Typography variant="caption">{formatDate(date)}</Typography>
+                    <br />
+                    {article.eyeCatching && <StyledImage src={article.eyeCatching.url} />}
                     <Box textAlign="center">
                       <ButtonLink small href={`articles/${article.id}`}>
                         {article.title}
