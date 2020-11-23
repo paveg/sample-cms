@@ -25,7 +25,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const origRenderPage = ctx.renderPage;
 
   const renderOptions = {
-    enhanceApp: (App) => (props) => scSheet.collectStyles(<App {...props} />),
+    enhanceApp: (App) => (props) => scSheet.collectStyles(muiSheets.collect(<App {...props} />)),
   };
 
   try {
