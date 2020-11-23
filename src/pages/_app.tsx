@@ -2,23 +2,24 @@ import { AppProps } from 'next/app';
 import reset from 'styled-reset';
 import React from 'react';
 import Head from 'next/head';
-import { createGlobalStyle } from 'styled-components';
+import {
+  ThemeProvider as StyledComponentsThemeProvider,
+  createGlobalStyle,
+} from 'styled-components';
+import { ThemeProvider as MaterialUIThemeProvider, StylesProvider } from '@material-ui/styles';
+
+import theme from '../styles/theme';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
   // Write your global styles.
-  html, body, body > div:first-child,
-  div#__next, div#__next > div,
-  div#__next > div > div {
-    height: 100%;
-  }
 `;
 
 const App = ({ Component, pageProps }: AppProps) => {
   React.useEffect(() => {
-    const jss = document.querySelector('#jss-server-side');
-    if (jss && jss.parentNode) {
-      jss.parentNode.removeChild(jss);
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles && jssStyles.parentNode) {
+      jssStyles.parentNode.removeChild(jssStyles);
     }
   }, []);
 
@@ -37,11 +38,22 @@ const App = ({ Component, pageProps }: AppProps) => {
           rel="preload"
           as="style"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c"
+          rel="preload"
+          as="style"
+        />
         <title key="title">portfolio</title>
       </Head>
 
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <StylesProvider injectFirst>
+        <MaterialUIThemeProvider theme={theme}>
+          <StyledComponentsThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Component {...pageProps} />
+          </StyledComponentsThemeProvider>
+        </MaterialUIThemeProvider>
+      </StylesProvider>
     </>
   );
 };

@@ -1,16 +1,17 @@
 import * as React from 'react';
 import { Article } from '../../types/articles';
+import Layout from '../../components/layout';
 
 type Props = {
   article: Article;
 };
 
 const ArticleId: React.FC<Props> = ({ article }) => (
-  <>
+  <Layout>
     <h1>{article.title}</h1>
     <p>{article.publishedAt}</p>
     <div>{article.content}</div>
-  </>
+  </Layout>
 );
 
 export const getStaticPaths = async () => {
