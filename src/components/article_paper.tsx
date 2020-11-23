@@ -28,7 +28,7 @@ const ArticlePaper: React.FC<Props> = ({ article }) => {
         </Typography>
         <br />
         {article.eyeCatching && (
-          <StyledImage src={article.eyeCatching.url} alt={'an eye-catching image'} />
+          <StyledImage src={article.eyeCatching.url} alt="an eye-catching image" />
         )}
         <Box textAlign="center">
           <ButtonLink small href={`articles/${article.id}`}>
