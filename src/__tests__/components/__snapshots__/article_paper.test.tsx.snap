@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout when does not include children renders correctly component 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded"
+>
+  <div
+    className="MuiBox-root MuiBox-root-1"
+  >
+    <span
+      className="MuiTypography-root MuiTypography-caption"
+    >
+      <u>
+        2020-10-23
+      </u>
+    </span>
+    <br />
+    <img
+      className="sc-bdfBwQ dpAPNw"
+      src="https://example.com/img"
+    />
+    <div
+      className="MuiBox-root MuiBox-root-2"
+    >
+      <a
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSizeSmall MuiButton-sizeSmall"
+        href="/articles/testId"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="MuiButton-label"
+        >
+          testTitle
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
