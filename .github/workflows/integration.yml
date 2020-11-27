@@ -19,7 +19,4 @@ jobs:
         with:
           name: coverage
           path: coverage
-      - uses: hayuna/jest-reporter-action@v0.1.2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-command: 'npm run test:ci'
+      - run: bash <(curl -s https://codecov.io/bash)
