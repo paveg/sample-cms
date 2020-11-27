@@ -21,7 +21,7 @@ $ npm run dev
 
 ### with vercel
 
-```
+```bash
 $ npm install -g vercel
 $ vercel dev
 # Launch server http://localhost:3000
